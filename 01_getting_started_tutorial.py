@@ -1,0 +1,16 @@
+# print(SynthDefs)
+
+# p1 >> nylon([0, 2, 4], dur=[1, 1/2, 1/2])
+# p1 >> creep([0, 5, 3, 6], dur=[1, 1/3, 1/3, 1/3], amp=0.75)
+
+## Adding values to change the pitch ##
+# p1 >> pluck([0, 1, 2, 3], dur=2)
+# p1 >> pluck([0, 1, 2, 3], dur=2) + [0, 0, 4]
+# p1 >> pluck([0, 1, 2, 3], dur=2) + [0, 0, 0, 8]
+# p1 >> pluck([0, 1, 2, 3], dur=2) + [0, 8, 0, 8]
+
+## Playing chords ##
+# p1 >> pluck([0, 1, 2, 3], dur=2)
+# p1 >> pluck([0, 1, 2, 3], dur=2) + (0, 2, 4)
+# p1 >> pluck((0, 2, 4), dur=2)
+p1 >> pluck([(0, 2, 4), (4, 6, 8)], dur=2)
