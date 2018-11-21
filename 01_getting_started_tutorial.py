@@ -14,13 +14,13 @@
 # p1 >> pluck([0, 1, 2, 3], dur=2) + (0, 2, 4)
 # p1 >> pluck((0, 2, 4), dur=2)
 # p1 >> pluck([(0, 2, 4), (4, 6, 8)], dur=2)
-
+# p1 >> pluck([(0, 2, 4), (0, 3, 5)], dur=4)
 
 ## Playing samples ##
-## d1 >> play("x-o-")
-## d1 >> play("(xo)---")
-## d1 >> play("(x-)(-x)o-")
-## d1 >> play("x-o[---]", dur=1)
-## d1 >> play("[xx]-o[---]", dur=1)
-## d1 >> play("x-o{-=*}")  # picking a random
+# d1 >> play("x-o-")
+# d1 >> play("(xo)---")
+# d1 >> play("(x-)(-x)o-")
+# d1 >> play("x-o[---]", dur=1)
+# d1 >> play("[xx]-o[---]", dur=1)
+# d1 >> play("x-o{-=*}")  # picking a random
 d1 >> play("(x[--])xo{-[--][-x]}")  # TODO: study
