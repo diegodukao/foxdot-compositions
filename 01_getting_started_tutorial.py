@@ -27,5 +27,16 @@ d1 >> play("(x[--])xo{-[--][-x]}")  # TODO: study
 
 ## Stutter: repeats values in a Pattern n times
 # p1 >> pluck(P[0, 3, 0, 4].stutter(4))
+# p1 >> pluck(P[(0, 2, 4), (0, 3, 5)].stutter(2), dur=2)
 # p1 >> pluck(P[0, 3, 0, 4].stutter(4) + (0, 2, 4))
-p1 >> pluck(P[(0, 2, 4), (0, 3, 5)].stutter(2), dur=2)
+p1 >> pluck(P[0, 3, 0, 4].stutter(32), dur=1/4) + (0, 2, 4)
+
+## TimeVar
+# p1 >> pluck(P[0, 3, 0, 4].stutter(8)) + (0, 2, 4)
+# p1 >> pluck(var([0, 3, 0, 4], 8)) + (0, 2, 4)
+# p1 >> pluck(var([0, 3, 0, 4], 8), dur=1/2) + (0, 2, 4)
+# p1 >> pluck(var([0, 3, 0, 4], 8), dur=[1/2, 1, 1, 1/2]) + (0, 2, 4)
+# p1 >> pluck(var([0, 3, 0, 4], 8), dur=[1/2, 1, 2, 1/2]) + (0, 2, 4)
+# p1 >> pluck(var([0, 3, 0, 4], 8), dur=[1/2, 1/4, 1/4, 1/2, 1/2]) + (0, 2, 4)
+# p1 >> pluck(var([0, 4, 2, 5], 8), dur=[1/2, 1/4, 1/4, 1/2, 1/2]) + (0, 2, 4)
+p1 >> pluck(var([0, 4, 2, 5], 8), dur=[1/2, 1/4, 1/3, 1/2]) + (0, 2, 4)
