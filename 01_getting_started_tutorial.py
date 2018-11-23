@@ -24,3 +24,8 @@
 # d1 >> play("[xx]-o[---]", dur=1)
 # d1 >> play("x-o{-=*}")  # picking a random
 d1 >> play("(x[--])xo{-[--][-x]}")  # TODO: study
+
+## Stutter: repeats values in a Pattern n times
+# p1 >> pluck(P[0, 3, 0, 4].stutter(4))
+# p1 >> pluck(P[0, 3, 0, 4].stutter(4) + (0, 2, 4))
+p1 >> pluck(P[(0, 2, 4), (0, 3, 5)].stutter(2), dur=2)
