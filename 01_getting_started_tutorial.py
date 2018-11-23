@@ -40,3 +40,7 @@ p1 >> pluck(P[0, 3, 0, 4].stutter(32), dur=1/4) + (0, 2, 4)
 # p1 >> pluck(var([0, 3, 0, 4], 8), dur=[1/2, 1/4, 1/4, 1/2, 1/2]) + (0, 2, 4)
 # p1 >> pluck(var([0, 4, 2, 5], 8), dur=[1/2, 1/4, 1/4, 1/2, 1/2]) + (0, 2, 4)
 p1 >> pluck(var([0, 4, 2, 5], 8), dur=[1/2, 1/4, 1/3, 1/2]) + (0, 2, 4)
+
+## Linvar: changes the value linearly between the two values over n beats
+# p1 >> pluck(dur=1/4, pan=linvar([-1, 1], 8))
+p1 >> pluck(dur=1/4, amp=linvar([0, 2], 8))
