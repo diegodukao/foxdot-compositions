@@ -2,6 +2,18 @@
 
 Scale.default = "minor"
 
+print(b1.pitch + P[:10:2])
+
+print(PDur(5,8)*2)
+
+print(PStep(7,5,6))
+
+p0 >> blip(P[:10:2])
+
+d0 >> play("Xs").stop()
+
+p0.stutter(4, dur=3)
+
 p1 >> blip(b1.pitch + P[:10:2], dur=PDur(5,8)*2, sus=2, oct=PStep(7,5,6)).every(6, "reverse").often("trim", 3).every(9, "stutter", 4, dur=3)
 
 d1 >> play("  o   o ")
