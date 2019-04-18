@@ -3,14 +3,19 @@
 Scale.default = "dorian"
 Clock.bpm = 144
 
-var.chords = var([0,-1,3], dur=[4,4,8])
+var.chords = var([0,5,4,2], dur=[4,4,6,2])
 
 
 b1 >> sawbass(var.chords, dur=1)
 
+print(PDur(3,8)*2)
 b1 >> sawbass(var.chords, dur=PDur(3,8)*2)
 
-b1 >> sawbass(var.chords, dur=PDur(3,8)*2, oct=[5,5,[6,4],5], pan=[0,[-1,1]]) + [0,0,4,0,7]
+b1 >> sawbass(var.chords, dur=1, oct=[5,5,[6,4],5])
+
+b1 >> sawbass(var.chords, dur=PDur(3,8)*2, oct=[5,5,[6,4],5])
+
+b1 >> sawbass(var.chords, dur=PDur(3,8)*2, oct=[5,5,[6,4],5], pan=[0,[-1,1]])
 
 
 p1 >> blip([var.chords,2,3,4], sus=2)
@@ -20,9 +25,9 @@ p1 >> blip([var.chords,2,3,4], sus=2)
 
 p1 >> blip([var.chords,2,3,4], sus=2).every(6, "offadd", 5)
 
-p1 >> blip([var.chords,2,3,4], sus=2).every(6, "offadd", 5).every(7, "stutter", 4, dur=3, pan=[-1,1], oct=6)
+p1 >> blip([var.chords,2,3,4], sus=2).every(6, "offadd", 5).every(9, "stutter", 3, dur=3, pan=[-1,1], oct=6)
 
-p1 >> blip([var.chords,2,3,4], sus=2).every(6, "offadd", 5).every(7, "stutter", 4, dur=3, pan=[-1,1], oct=6).every(8, "reverse")
+p1 >> blip([var.chords,2,3,4], sus=2).every(6, "offadd", 5).every(9, "stutter", 3, dur=3, pan=[-1,1], oct=6).every(6, "reverse")
 
 # Now let's introduce our triads again. This time we'll use "var.chords" instead
 # of "b1.pitch" when adding (0, 2, 4).
@@ -35,6 +40,7 @@ print(b1.pitch)
 
 p2 >> star(b1.pitch + (0, 2, 4), dur=PDur(3,8))
 
+d1 >> play("x x ")
 
 d1 >> play("x-x(-[--])")
 
