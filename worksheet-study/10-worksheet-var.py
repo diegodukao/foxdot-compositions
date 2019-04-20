@@ -1,3 +1,25 @@
+# TimeVar
+
+# Playing the chords for 8 beats each but with a player that is playing
+# notes every quarter beats.
+
+# Using stutter
+print(P[0, 3, 0, 4].stutter(4) + (0, 2, 4))
+
+p1 >> pluck(P[0, 3, 0, 4].stutter(32), dur=1/4) + (0, 2, 4)
+
+p1 >> pluck(P[0, 3, 0, 4].stutter(32), dur=[1,1/4,1/4,1/2]) + (0, 2, 4)
+
+# Using TimeVar
+a = var([0,3,5,4,2,7,6],4)
+print(int(Clock.now()), a)
+
+print(int(Clock.now()), a)
+
+p1 >> pluck(var([0, 3, 0, 4], 8), dur=[1/4]) + (0, 2, 4)
+
+p1 >> pluck(var([0, 3, 0, 4], 8), dur=[1,1/4,1/4,1/2]) + (0, 2, 4)
+
 # line 547
 
 Scale.default = "dorian"
