@@ -20,11 +20,11 @@ p1 >> pluck(var([0, 3, 0, 4], 8), dur=[1/4]) + (0, 2, 4)
 
 p1 >> pluck(var([0, 3, 0, 4], 8), dur=[1,1/4,1/4,1/2]) + (0, 2, 4)
 
+
 # line 547
 
 Scale.default = "dorian"
 Clock.bpm = 144
-
 var.chords = var([0,5,4,2], dur=[4,4,6,2])
 
 
@@ -35,7 +35,7 @@ b1 >> sawbass(var.chords, dur=PDur(3,8)*2)
 
 b1 >> sawbass(var.chords, dur=1, oct=[5,5,[6,4],5])
 
-b1 >> sawbass(var.chords, dur=PDur(3,8)*2, oct=[5,5,[6,4],5])
+b1 >> sawbass(var.chords, dur=PDur(3,8)*2, oct=[5,5,[6,4],5], pan=0)
 
 b1 >> sawbass(var.chords, dur=PDur(3,8)*2, oct=[5,5,[6,4],5], pan=[0,[-1,1]])
 
@@ -54,7 +54,7 @@ p1 >> blip([var.chords,2,3,4], sus=2).every(6, "offadd", 5).every(9, "stutter", 
 # Now let's introduce our triads again. This time we'll use "var.chords" instead
 # of "b1.pitch" when adding (0, 2, 4).
 
-p2 >> star(var.chords + (0, 2, 4), dur=PDur(3,8), amp=0.6)
+p2 >> star(var.chords + (0, 2, 4), dur=PDur(3,8), amp=0.4)
 print(var.chords)
 print(b1.pitch)
 
@@ -68,14 +68,16 @@ d1 >> play("x-x(-[--])")
 
 d2 >> play("  H ")
 
-
 # Let's use a new "var" to apply a high pass filter to the drums for the last bar of an 8 bar cycle
 # Set the filter to be 0 for 28 beats (7 bars x 4 beats) and then 4000 for 4 beats (1 bar x 4 beats)
 
-var.filter = var([0,8000], dur=[28,4])
+var.hpf = var([0,8000], dur=[28,4])
 
-d1 >> play("x-", hpf=var.filter)
-d2 >> play("  H ", hpf=var.filter)
+d1 >> play("x-x(-[--])", hpf=var.hpf, pan=0)
+
+d2 >> play("  H ", hpf=var.hpf).stop()
+
+var.hpf = linvar([0,8000], dur=10)
 
 # Try and add your elements to the mix - see if there are other interesting ways of
 # combining the "var.chords" variable.
