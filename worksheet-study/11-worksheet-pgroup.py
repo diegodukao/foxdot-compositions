@@ -32,6 +32,8 @@ p1 >> pluck(P*(0, 4), dur=PDur(3,8), sus=1)
 
 p1 >> pluck(P*(0, 4), dur=4, sus=2)
 
+p1 >> pluck(P+(0, 4), dur=4, sus=2)
+
 p1 >> pluck(P+(0, 4), dur=PDur(3,8), sus=1)
 
 p1 >> pluck(P+(0, 4), dur=3, sus=1)
@@ -41,3 +43,5 @@ p1 >> pluck(P*(0, 4, 6, 6, 2,), dur=3, sus=1)
 p1 >> pluck(P+(0, 4, 6, 6, 2,), dur=3, sus=1)
 
 p1 >> pluck(P+(0, 4), dur=PDur(3,8), sus=2)
+
+print(PDur(3,8))
