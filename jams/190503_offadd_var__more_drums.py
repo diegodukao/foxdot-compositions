@@ -4,6 +4,8 @@ Clock.bpm = 120
 
 var.off = var([3, 5, 6], dur=8)
 
+# TODO: expand the P range for more than the size of the melody and get random
+# notes
 p1 >> keys(P[0:8:4].offadd(var.off), scale=Scale.minor)
 
 # didn't work well
