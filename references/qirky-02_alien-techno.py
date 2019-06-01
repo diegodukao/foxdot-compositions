@@ -1,3 +1,5 @@
+# https://github.com/Qirky/ten-lines-or-less/blob/master/alien-techno.py
+
 Scale.default="minor"
 Clock.bpm=140
 c1 >> play("@", dur=1/4, sample=P[:8].rotate([0,1,3]), rate=4, pan=-0.5)

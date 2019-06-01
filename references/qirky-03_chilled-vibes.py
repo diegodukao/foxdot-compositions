@@ -1,3 +1,5 @@
+# https://github.com/Qirky/ten-lines-or-less/blob/master/chilled-vibes.py
+
 Clock.bpm=100; Scale.default="minor"
 
 # p1 >> pulse([0,-1,-2,-3], dur=8, lpr=1, crush=0) + (0,2,4,const(6))
