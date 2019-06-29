@@ -1,0 +1,8 @@
+dó | ré | mi | fá | sol | lá | si
+C  | D  | E  | F  |  G  | A  | B
+
+escala de dó maior
+C  | D  | E  | F  |  G  | A  | B
+
+escala de dó menor
+C  | D  | Eb | F  |  G  | Ab | Bb
