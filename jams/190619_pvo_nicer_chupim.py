@@ -14,7 +14,7 @@ p1 >> sawbass(P[-2, -4], dur=4)
 
 # gotten from qirky-05_crazytown
 d3 >> play("x-o-x-o-x-o-x-oo(oo)", room=0.8, mix=0.4, amp=[0.7, 0.6, 0.7, 0.8])\
-           .every(5, "trim", 2)
+           .every(5, "trim", 2).stop()
 
 # gotten from qirky-05_crazytown
 p4 >> pads(p1.pitch + P[0,2,4,6], dur=4, spin=4, oct=4, amp=2.0, chop=[8,16],

@@ -13,7 +13,7 @@ Clock.bpm = 110
 d1 >> play("<xxxx>< * *>", dur=1, sample=0)
 hh >> play("-------[--]", dur=1/2, sample=3)
 
-h2 >> play("- -  ---", dur=1/2, sample=2).stop()
+h2 >> play("- -  ---", dur=1/2, sample=2)
 
 print(Samples)
 
