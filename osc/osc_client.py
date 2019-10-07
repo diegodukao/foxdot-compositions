@@ -1,6 +1,6 @@
 # extracted from https://github.com/ptone/pyosc/blob/master/examples/knect-snd.py
 
-from OSC import OSCClient, OSCMessage
+from FoxDot.lib.OSC3 import OSCClient, OSCMessage
 
 client = OSCClient()
 client.connect( ("localhost", 7110) )
