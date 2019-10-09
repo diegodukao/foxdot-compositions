@@ -1,7 +1,7 @@
 # https://github.com/Qirky/ten-lines-or-less/blob/master/groove-is-in-the-hard-drive.py
 
 Clock.bpm=110; Scale.default="major"
-p1 >> pluck((2,[4,4,4,4,5],6,[8,8,9]), dur=1/4, sus=1/2, vib=0, pan=PWhite(-1,1), vibdepth=0.02, coarse=0, oct=[4,5], fmod=PWhite(-4,4), lpf=PWhite(2000,4000), lpr=PWhite(0.2,0.4)).stop()
+p1 >> pluck((2,[4,4,4,4,5],6,[8,8,9]), dur=1/4, sus=1/2, vib=0, pan=PWhite(-1,1), vibdepth=0.02, coarse=0, oct=[4,5], fmod=PWhite(-4,4), lpf=PWhite(2000,4000), lpr=PWhite(0.2,0.4))
 
 d1 >> play(P["x-(iS)"][:8].rotate(var([1,3])), rate=1.5, dur=1/4, delay=var([0,(0,0.75)],PRand(8))).stop()
 
