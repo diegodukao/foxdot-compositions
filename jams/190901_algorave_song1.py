@@ -9,9 +9,6 @@ p2 >> karp(p0.pitch + [0, 2, 3, 7, 9], dur=[1/2, 1, 1/2, 1, 1, 1/2], amp=1.2)
 p3 >> keys(P[0:7], drive=0.5, dur=var([1/4, 1/2], dur=[2, 4]), sus=1/4, amp=0.6).penta().shuffle()
 
 
-
-
-
 d1 >> play("^  ^").every(4, "stutter", 4)
 
 d2 >> play("X O ").every(2, "bubble")
