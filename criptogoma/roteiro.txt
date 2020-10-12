@@ -1,0 +1,33 @@
+1 - Introdução
+  - Eu
+  - Python Nordeste 2019
+  - Pietro Bapthysthe
+  - Algorave Brasil
+2 - O que é o FoxDot?
+3 - Play
+  - O que é uma função? (ctrl+enter para executar)
+  - Como botar outros samples?
+4 - Synths
+  - dur
+  - amp, pan
+  - Oitavas
+  - Escalas
+    - [0:7]
+  - Campo harmônico
+  - p1.pitch
+- TimeVar
+- Funções de Pattern
+  - shuffle
+  - reverse
+  - offadd
+  - strutter
+  - every
+- Tempos complexos no Play
+- Ritmos Euclidianos
+  - groovemechanics.com/euclid/
+- Efeitos
+- LinVar, PWhite
+
+
+Falar:
+Victor Wooten
